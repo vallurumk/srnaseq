@@ -1,0 +1,23 @@
+small RNA-Seq pipeline (paired-end/single-end)
+----------------------------------------------
+
+The small RNA-seq pipeline requires the following software
+
+fastqc-0.11.8-1
+multiqc-1.7-2
+bbmap-38.22-1
+dnapi-1.1-3
+cutadapt-2.1-0
+seqkit-0.10.1-1
+fastx_toolkit-0.0.14-7
+bowtie-1.2.2-1
+mirdeep2-2.0.0.8
+
+File "smallseq.sh" contains the code for the mirna expression profiling using miRDeep2
+
+Example paired-end dataset: PRJNA490335
+
+References
+1. Pacholewska A et al. Differential Expression of Serum MicroRNAs Supports CD4+ T Cell Differentiation into Th2/Th17 Cells in Severe Equine Asthma. Genes (Basel) 2017 Dec; 8(12): 383. PMCID: PMC5748701
+2. Friedländer M R et al. miRDeep2 accurately identifies known and hundreds of novel microRNA genes in seven animal clades. Nucleic Acids Res. 2012 Jan; 40(1): 37–52. PMCID: PMC3245920
+3. Lin J et al. Network-based integration of mRNA and miRNA profiles reveals new target genes involved in pancreatic cancer. Mol Carcinog 2019 Feb;58(2):206-218. PMID: 30294829
