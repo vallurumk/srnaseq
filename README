@@ -17,7 +17,9 @@ File "smallseq.sh" contains the code for the mirna expression profiling using mi
 
 Example paired-end dataset: PRJNA490335
 
+----------------------------------------------------------------------------------------------------------------------------------
+
 References
 1. Pacholewska A et al. Differential Expression of Serum MicroRNAs Supports CD4+ T Cell Differentiation into Th2/Th17 Cells in Severe Equine Asthma. Genes (Basel) 2017 Dec; 8(12): 383. PMCID: PMC5748701
-2. Friedländer M R et al. miRDeep2 accurately identifies known and hundreds of novel microRNA genes in seven animal clades. Nucleic Acids Res. 2012 Jan; 40(1): 37–52. PMCID: PMC3245920
+2. FriedlÃ¤nder M R et al. miRDeep2 accurately identifies known and hundreds of novel microRNA genes in seven animal clades. Nucleic Acids Res. 2012 Jan; 40(1): 37â€“52. PMCID: PMC3245920
 3. Lin J et al. Network-based integration of mRNA and miRNA profiles reveals new target genes involved in pancreatic cancer. Mol Carcinog 2019 Feb;58(2):206-218. PMID: 30294829
