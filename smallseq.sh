@@ -5,12 +5,13 @@ fastqc *.fq
 multiqc .
 
 # Identify adapters | bbmerge.sh is part of the BBtools package | dnapi.py is part of DNApi
-bbmerge.sh in=Reads_1.fq" in2=Reads_2.fq" mininsert=17 outa=adapterst.fa
+bbmerge.sh in=Reads_1.fq in2=Reads_2.fq mininsert=17 outa=adapterst.fa
 dnapi.py --show-all Reads.fq
 
 # Trim the adapters | Paired-end | Single-end
 cutadapt -a TGGAATTCTCGGGTGCCAAGGAACTCCAGTCACTACAGCATCTCGTATGCCGTCTTCTGCTTG -A GATCGTCGGACTGTAGAACTCTGAACGTGTAGATCTCGGTGGTCGCCGTATCATT -o Reads_1.trim.fq -p Reads_2.trim.fq Reads_1.fq Reads_2.fq
-cutadapt -a TGGAATTCTCGGGTGCCAAGG -o Reads.trim.fq Reads.fq
+cutadapt -a TGGAATTCTCGGGTGCCAAGG -o Read_1.trim.fq Read_1.fq
+umi_tools extract --stdin=Read_1.fq --log=output.log --stdout=Read_1.trim.fq --extract-method=regex --bc-pattern='.+(?P<discard_1>AACTGTAGGCACCATCAAT){s<=2}(?P<umi_1>.{12})(?P<discard_2>.+)'
 
 # Paired-end | Generate reverse complement of Reads_2.trim.fq and concatenate 
 seqkit seq Reads_2.trim.fq -r -p -o Reads_2.trimrc.fq
